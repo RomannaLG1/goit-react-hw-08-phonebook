@@ -10,6 +10,8 @@ import 'modern-normalize';
 import './styles.css';
 import { theme } from 'theme';
 
+// test //
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Provider store={store}>
