@@ -1,8 +1,8 @@
 import axios from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
+import { toast } from 'react-hot-toast';
 
 axios.defaults.baseURL = 'https://connections-api.herokuapp.com/';
-
 
 // Utility to add JWT
 const setAuthHeader = token => {
@@ -24,9 +24,11 @@ export const register = createAsyncThunk(
     try {
       const res = await axios.post('/users/signup', credentials);
       // After successful registration, add the token to the HTTP header
+      toast.success(`You register, welcome ${res.data.user.name}`);
       setAuthHeader(res.data.token);
       return res.data;
     } catch (error) {
+      toast.error('This user already exists, try again');
       return thunkAPI.rejectWithValue(error.message);
     }
   }
@@ -42,9 +44,11 @@ export const logIn = createAsyncThunk(
     try {
       const res = await axios.post('/users/login', credentials);
       // After successful login, add the token to the HTTP header
+      console.log(`well, comeback ${res.data.user.name}`);
       setAuthHeader(res.data.token);
       return res.data;
     } catch (error) {
+      console.log('Ohh, something wrong');
       return thunkAPI.rejectWithValue(error.message);
     }
   }
@@ -58,8 +62,10 @@ export const logOut = createAsyncThunk('auth/logout', async (_, thunkAPI) => {
   try {
     await axios.post('/users/logout');
     // After a successful logout, remove the token from the HTTP header
+    console.log('Bay');
     clearAuthHeader();
   } catch (error) {
+    console.log('Ohh, something wrong');
     return thunkAPI.rejectWithValue(error.message);
   }
 });

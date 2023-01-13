@@ -2,9 +2,9 @@ export const theme = {
     colors: {
       text: '#fff',
       background: 'rgba(216,223,255,0.7)',
-      primary: 'rgba(9,30,121,1)',
-      secondary: 'rgba(0,3,36,1)',   
-      accent: 'rgba(9,90,200,0.6)',
+      primary: 'rgba(0, 0, 0, 0.54)',
+      secondary: 'rgba(0, 0, 0, 0.50)',   
+      accent: '#1976d2',
       warning: 'rgba(255,53,138,0.9)'
       
     },

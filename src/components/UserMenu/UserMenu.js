@@ -2,6 +2,9 @@ import { useDispatch } from 'react-redux';
 import { logOut } from 'redux/auth/operations';
 import { useAuth } from 'hooks';
 import css from './UserMenu.module.css';
+import { Button, Typography } from '@mui/material';
+import { LoginOutlined } from '@mui/icons-material';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 export const UserMenu = () => {
   const dispatch = useDispatch();
@@ -9,10 +12,19 @@ export const UserMenu = () => {
 
   return (
     <div className={css.wrapper}>
-      <p className={css.username}>Welcome, {user.name}</p>
-      <button type="button" onClick={() => dispatch(logOut())}>
+      <AccountCircleIcon fontSize="large" />
+      <Typography variant="h6" component="p">
+        Welcome, {user.name}
+      </Typography>
+
+      <Button
+        type="button"
+        startIcon={<LoginOutlined />}
+        variant="contained"
+        onClick={() => dispatch(logOut())}
+      >
         Logout
-      </button>
+      </Button>
     </div>
   );
 };

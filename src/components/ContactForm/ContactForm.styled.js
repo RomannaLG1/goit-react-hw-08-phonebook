@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+// import styled from '@emotion/styled';
 import { Form, Field, ErrorMessage } from 'formik';
 
 export const FormStyled = styled(Form)`
@@ -7,7 +8,7 @@ width: 300px;
  justify-content: center;
 gap: 35px;
   flex-direction: column;
-margin: ${p => p.theme.space[4]}px;
+margin: 30px auto;
 
 `;
 
@@ -26,10 +27,13 @@ transition: color 250ms linear;
 export const Input = styled(Field)`
 display: inline-block;
 padding: ${p => p.theme.space[3]}px;
-width: 200px;
+width: 300px;
 color: ${p => p.theme.colors.primary};
-border: 2px solid ${p => p.theme.colors.primary};
-border-radius: ${p => p.theme.radii.medium};
+border: none;
+border-bottom: 1px solid ${p => p.theme.colors.primary};
+outline: none;
+
+/* border-radius: ${p => p.theme.radii.medium}; */
 font-size: ${p => p.theme.fontSizes[6]};
 transition: border 250ms linear;
 text-transform: capitalize;
@@ -38,10 +42,10 @@ text-transform: capitalize;
 }
 &:hover, :focus ,:focus-visible{
     outline: none;
-    border: 2px solid ${p => p.theme.colors.accent};
+    border-bottom: 1px solid ${p => p.theme.colors.accent};
 }
 &::placeholder{
-  color: ${p => p.theme.colors.accent};
+  color: ${p => p.theme.colors.secondary};
 }
 `;
 

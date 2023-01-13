@@ -1,9 +1,8 @@
-import { AiOutlinePlus } from 'react-icons/ai';
+
 import { Formik } from 'formik';
 import {
   ErrorMsgName,
   ErrorMsgPhone,
-  FormBtn,
   FormStyled,
   Input,
   Label,
@@ -14,8 +13,9 @@ import 'yup-phone';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectContacts } from 'redux/contacts/selectors';
 import { addContact } from 'redux/contacts/operations';
-// import { selectContacts } from 'redux/selectors';
-// import { addContact } from '../../redux/operations';
+import { Fab } from '@mui/material';
+import AddIcon from '@mui/icons-material/Add';
+import { toast } from 'react-hot-toast';
 
 const valName = /^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$/;
 
@@ -29,7 +29,7 @@ export const ContactForm = () => {
     name: yup
       .string()
       .min(2, 'Too Short!')
-      .max(10, 'Too Long!')
+      .max(25, 'Too Long!')
       .matches(
         valName,
         'Name may contain only letters, apostrophe, dash and spaces'
@@ -41,14 +41,14 @@ export const ContactForm = () => {
   const dispatch = useDispatch();
   const contacts = useSelector(selectContacts);
 
-  // +380989809898///
-  const addNewContact = ({name, number}) => {
-    console.log('form', name, number);
-    contacts.find(
-      contact => contact.name === name
-    )
-      ? alert(`${name} is already in contacts`)
-      : dispatch(addContact({name, number}));
+  const addNewContact = ({ name, number }) => {
+    contacts.find(contact => contact.name === name)
+      ? toast(`${name} is already in contacts`, { icon: '⚠️' })
+      : dispatch(addContact({ name, number })).then(
+          toast(`Contact ${name} was added`, {
+            icon: '👏',
+          })
+        );
   };
 
   const handleSubmit = (value, { resetForm }) => {
@@ -64,20 +64,20 @@ export const ContactForm = () => {
     >
       <FormStyled>
         <Label htmlFor="name">
-          <BsPersonSquare size="30" />
+          <BsPersonSquare size="20" />
           <Input type="text" name="name" placeholder="Name" autocomplite="on" />
           <ErrorMsgName name="name" component="div" />
         </Label>
 
         <Label htmlFor="tel">
-          <BsTelephoneForwardFill size="30" />
+          <BsTelephoneForwardFill size="20" />
           <Input type="tel" name="number" placeholder="Phone" />
           <ErrorMsgPhone name="number" component="span" />
         </Label>
-        <FormBtn type="submit">
-          <AiOutlinePlus size="30" />
-          Add contact
-        </FormBtn>
+
+        <Fab type="submit" color="primary" aria-label="add">
+          <AddIcon />
+        </Fab>
       </FormStyled>
     </Formik>
   );

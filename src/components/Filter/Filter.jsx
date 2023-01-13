@@ -17,7 +17,7 @@ export const Filter = () => {
     <Formik>
       <FilterForm>
         <FilterLabel htmlFor={filterId}>
-          <MdPersonSearch size="48" />
+          <MdPersonSearch size="25" />
           <FilterInput
             id={filterId}
             type="text"
