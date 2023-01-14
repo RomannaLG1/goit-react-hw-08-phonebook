@@ -1,29 +1,28 @@
 {
   "files": {
-    "main.css": "/goit-react-hw-08-phonebook/static/css/main.174783e7.css",
-    "main.js": "/goit-react-hw-08-phonebook/static/js/main.8697b906.js",
-    "static/js/266.08d7c2fa.chunk.js": "/goit-react-hw-08-phonebook/static/js/266.08d7c2fa.chunk.js",
-    "static/css/40.1e05f24e.chunk.css": "/goit-react-hw-08-phonebook/static/css/40.1e05f24e.chunk.css",
-    "static/js/40.517cd4a7.chunk.js": "/goit-react-hw-08-phonebook/static/js/40.517cd4a7.chunk.js",
-    "static/css/635.e2937cc9.chunk.css": "/goit-react-hw-08-phonebook/static/css/635.e2937cc9.chunk.css",
-    "static/js/635.45febfb2.chunk.js": "/goit-react-hw-08-phonebook/static/js/635.45febfb2.chunk.js",
-    "static/js/200.855b64e1.chunk.js": "/goit-react-hw-08-phonebook/static/js/200.855b64e1.chunk.js",
-    "static/js/270.dc9e8005.chunk.js": "/goit-react-hw-08-phonebook/static/js/270.dc9e8005.chunk.js",
-    "static/js/543.a878e4ca.chunk.js": "/goit-react-hw-08-phonebook/static/js/543.a878e4ca.chunk.js",
+    "main.css": "/goit-react-hw-08-phonebook/static/css/main.a937b24e.css",
+    "main.js": "/goit-react-hw-08-phonebook/static/js/main.c84fb202.js",
+    "static/js/266.0d528076.chunk.js": "/goit-react-hw-08-phonebook/static/js/266.0d528076.chunk.js",
+    "static/js/478.ec50d962.chunk.js": "/goit-react-hw-08-phonebook/static/js/478.ec50d962.chunk.js",
+    "static/js/960.21022af2.chunk.js": "/goit-react-hw-08-phonebook/static/js/960.21022af2.chunk.js",
+    "static/js/619.25a09bad.chunk.js": "/goit-react-hw-08-phonebook/static/js/619.25a09bad.chunk.js",
+    "static/js/653.0cfa8c64.chunk.js": "/goit-react-hw-08-phonebook/static/js/653.0cfa8c64.chunk.js",
+    "static/js/890.454efccc.chunk.js": "/goit-react-hw-08-phonebook/static/js/890.454efccc.chunk.js",
+    "static/js/838.0a48b1ff.chunk.js": "/goit-react-hw-08-phonebook/static/js/838.0a48b1ff.chunk.js",
+    "static/media/main.png": "/goit-react-hw-08-phonebook/static/media/main.45c42402f6224ff5bea5.png",
     "index.html": "/goit-react-hw-08-phonebook/index.html",
-    "main.174783e7.css.map": "/goit-react-hw-08-phonebook/static/css/main.174783e7.css.map",
-    "main.8697b906.js.map": "/goit-react-hw-08-phonebook/static/js/main.8697b906.js.map",
-    "266.08d7c2fa.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/266.08d7c2fa.chunk.js.map",
-    "40.1e05f24e.chunk.css.map": "/goit-react-hw-08-phonebook/static/css/40.1e05f24e.chunk.css.map",
-    "40.517cd4a7.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/40.517cd4a7.chunk.js.map",
-    "635.e2937cc9.chunk.css.map": "/goit-react-hw-08-phonebook/static/css/635.e2937cc9.chunk.css.map",
-    "635.45febfb2.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/635.45febfb2.chunk.js.map",
-    "200.855b64e1.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/200.855b64e1.chunk.js.map",
-    "270.dc9e8005.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/270.dc9e8005.chunk.js.map",
-    "543.a878e4ca.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/543.a878e4ca.chunk.js.map"
+    "main.a937b24e.css.map": "/goit-react-hw-08-phonebook/static/css/main.a937b24e.css.map",
+    "main.c84fb202.js.map": "/goit-react-hw-08-phonebook/static/js/main.c84fb202.js.map",
+    "266.0d528076.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/266.0d528076.chunk.js.map",
+    "478.ec50d962.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/478.ec50d962.chunk.js.map",
+    "960.21022af2.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/960.21022af2.chunk.js.map",
+    "619.25a09bad.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/619.25a09bad.chunk.js.map",
+    "653.0cfa8c64.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/653.0cfa8c64.chunk.js.map",
+    "890.454efccc.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/890.454efccc.chunk.js.map",
+    "838.0a48b1ff.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/838.0a48b1ff.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.174783e7.css",
-    "static/js/main.8697b906.js"
+    "static/css/main.a937b24e.css",
+    "static/js/main.c84fb202.js"
   ]
 }
