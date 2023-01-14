@@ -6,7 +6,7 @@ import { PasswordInput } from 'components/BasicComponents/PasswordInput';
 import { InputForm } from 'components/BasicComponents/InputForm';
 import { BaseForm } from 'components/BasicComponents/BaseForm';
 import { validateRegisterForm } from 'helpers/validation';
-import { useEffect, useState } from 'react';
+
 
 
 export const RegisterForm = () => {
