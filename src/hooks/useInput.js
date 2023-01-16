@@ -7,7 +7,7 @@ export const useInput = (initialValue, validations) => {
   const valid = useValidation(value, validations)
 
   const onChange = e => {
-    setValue(e.target.value);
+    setValue(e.target.value.trim());
   };
   const onBlur = e => {
     setIsDirty(true);

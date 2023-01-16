@@ -22,7 +22,7 @@ export const LoginForm = () => {
         email: form.elements.email.value,
         password: form.elements.password.value,
       })
-    );
+    ).then(console.log('wellcome')).cath(e => console.log(e.massege));
     form.reset();
   };
 
