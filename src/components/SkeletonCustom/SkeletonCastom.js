@@ -51,7 +51,7 @@ export const SkeletonContactList = () => {
         width="100%"
         style={{ marginBottom: 6 }}
       />
-            <Skeleton
+      <Skeleton
         animation="wave"
         height={20}
         width="100%"
@@ -77,4 +77,22 @@ export const SkeletonContactList = () => {
       />
     </>
   );
+};
+
+export const SkeletonApp = () => {
+  <>
+    <Skeleton
+      animation="wave"
+      height={40}
+      width="100%"
+      style={{ marginBottom: 18 }}
+    />
+
+    <Skeleton
+      animation="wave"
+      height='70%'
+      width="70%"
+      style={{ marginBottom: 6 }}
+    />
+  </>;
 };

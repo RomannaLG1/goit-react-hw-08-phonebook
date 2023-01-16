@@ -1,4 +1,3 @@
-
 import { Formik } from 'formik';
 import {
   ErrorMsgName,
@@ -16,6 +15,7 @@ import { addContact } from 'redux/contacts/operations';
 import { Fab } from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
 import { toast } from 'react-hot-toast';
+import { ContactFormWrapper } from 'components/BasicComponents/ContactFormWrapper';
 
 const valName = /^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$/;
 
@@ -35,7 +35,7 @@ export const ContactForm = () => {
         'Name may contain only letters, apostrophe, dash and spaces'
       )
       .required(),
-    number: yup.string().phone('UA').required(),
+    number: yup.string().phone().required(),
   });
 
   const dispatch = useDispatch();
@@ -57,28 +57,35 @@ export const ContactForm = () => {
   };
 
   return (
-    <Formik
-      initialValues={startValues}
-      validationSchema={schema}
-      onSubmit={handleSubmit}
-    >
-      <FormStyled>
-        <Label htmlFor="name">
-          <BsPersonSquare size="20" />
-          <Input type="text" name="name" placeholder="Name" autocomplite="on" />
-          <ErrorMsgName name="name" component="div" />
-        </Label>
+    <ContactFormWrapper>
+      <Formik
+        initialValues={startValues}
+        validationSchema={schema}
+        onSubmit={handleSubmit}
+      >
+        <FormStyled>
+          <Label htmlFor="name">
+            <BsPersonSquare size="20" />
+            <Input
+              type="text"
+              name="name"
+              placeholder="Name"
+              autocomplite="on"
+            />
+            <ErrorMsgName name="name" component="div" />
+          </Label>
 
-        <Label htmlFor="tel">
-          <BsTelephoneForwardFill size="20" />
-          <Input type="tel" name="number" placeholder="Phone" />
-          <ErrorMsgPhone name="number" component="span" />
-        </Label>
+          <Label htmlFor="tel">
+            <BsTelephoneForwardFill size="20" />
+            <Input type="tel" name="number" placeholder="Phone" />
+            <ErrorMsgPhone name="number" component="span" />
+          </Label>
 
-        <Fab type="submit" color="primary" aria-label="add">
-          <AddIcon />
-        </Fab>
-      </FormStyled>
-    </Formik>
+          <Fab type="submit" color="primary" aria-label="add">
+            <AddIcon />
+          </Fab>
+        </FormStyled>
+      </Formik>
+    </ContactFormWrapper>
   );
 };

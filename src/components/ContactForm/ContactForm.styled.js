@@ -3,75 +3,75 @@ import styled from 'styled-components';
 import { Form, Field, ErrorMessage } from 'formik';
 
 export const FormStyled = styled(Form)`
-width: 300px;
- display: flex;
- justify-content: center;
-gap: 35px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  gap: 35px;
   flex-direction: column;
-margin: 30px auto;
-
+  margin: 30px auto;
+  position: relative;
 `;
 
 export const Label = styled.label`
- display: flex;
- align-items: center;
- gap: 10px;
-color: ${p => p.theme.colors.primary};
-transition: color 250ms linear;
-&:hover, :focus {
-  color: ${p => p.theme.colors.accent};
-}
-
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: ${p => p.theme.colors.primary};
+  transition: color 250ms linear;
+  &:hover,
+  :focus {
+    color: ${p => p.theme.colors.accent};
+  }
 `;
 
 export const Input = styled(Field)`
-display: inline-block;
-padding: ${p => p.theme.space[3]}px;
-width: 300px;
-color: ${p => p.theme.colors.primary};
-border: none;
-border-bottom: 1px solid ${p => p.theme.colors.primary};
-outline: none;
+  display: inline-block;
+  padding: ${p => p.theme.space[3]}px;
+  width: 300px;
+  color: ${p => p.theme.colors.primary};
+  border: none;
+  border-bottom: 1px solid ${p => p.theme.colors.primary};
+  outline: none;
 
-/* border-radius: ${p => p.theme.radii.medium}; */
-font-size: ${p => p.theme.fontSizes[6]};
-transition: border 250ms linear;
-text-transform: capitalize;
-&:first-letter {
+  /* border-radius: ${p => p.theme.radii.medium}; */
+  font-size: ${p => p.theme.fontSizes[6]};
+  transition: border 250ms linear;
+  text-transform: capitalize;
+  &:first-letter {
     text-transform: uppercase;
-}
-&:hover, :focus ,:focus-visible{
+  }
+  &:hover,
+  :focus,
+  :focus-visible {
     outline: none;
     border-bottom: 1px solid ${p => p.theme.colors.accent};
-}
-&::placeholder{
-  color: ${p => p.theme.colors.secondary};
-}
+  }
+  &::placeholder {
+    color: ${p => p.theme.colors.secondary};
+  }
 `;
 
 export const ErrorMsgName = styled(ErrorMessage)`
-position: absolute;
-top: 103px;
-left: 83px;
-color: ${p => p.theme.colors.warning};
-font-size: ${p => p.theme.fontSizes[6]};
-
-
+  position: absolute;
+  top: 41px;
+  left: 26px;
+  color: ${p => p.theme.colors.warning};
+  font-size: ${p => p.theme.fontSizes[6]};
 `;
 
 export const ErrorMsgPhone = styled(ErrorMessage)`
-position: absolute;
-top: 176px;
-left: 17px;
-color: ${p => p.theme.colors.warning};
-font-size: ${p => p.theme.fontSizes[6]};
+  position: absolute;
+  top: 114px;
+  left: 18px;
+  color: ${p => p.theme.colors.warning};
+  font-size: ${p => p.theme.fontSizes[6]};
 `;
 export const FormBtn = styled.button`
-width: 130px;
-display: flex;
-justify-content: space-between;
-align-items: center;
-color: ${p => p.theme.colors.primary};
+  width: 130px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: ${p => p.theme.colors.primary};
   background-color: transparent;
   padding: ${p => p.theme.space[3]}px;
   /* border: 2px solid ${p => p.theme.colors.primary}; */
@@ -79,7 +79,7 @@ color: ${p => p.theme.colors.primary};
   border-radius: ${p => p.theme.radii.medium};
   transition: color 250ms linear, background-color 250ms linear;
   &:hover,
-  &:focus{
+  &:focus {
     cursor: pointer;
     background-color: ${p => p.theme.colors.accent};
     color: ${p => p.theme.colors.text};
