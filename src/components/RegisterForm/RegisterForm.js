@@ -6,9 +6,7 @@ import { PasswordInput } from 'components/BasicComponents/PasswordInput';
 import { InputForm } from 'components/BasicComponents/InputForm';
 import { BaseForm } from 'components/BasicComponents/BaseForm';
 import { useInput } from 'hooks';
-import { ErrorInput } from 'components/BasicComponents/ErrorInput';
-
-
+import { ErrorInput, Wrapper } from 'components/BasicComponents/ErrorInput';
 
 export const RegisterForm = () => {
   const dispatch = useDispatch();
@@ -35,15 +33,21 @@ export const RegisterForm = () => {
   return (
     <BaseForm handleSubmit={handleSubmit}>
       <InputForm
-    
         onChange={e => name.onChange(e)}
         onBlur={e => name.onBlur(e)}
         value={name.value}
         name="name"
       />
       {/* {name.isDirty && name.isEmpty && <ErrorInput>{'enter name'}</ErrorInput>} */}
-      {name.isDirty && name.minLengthError && <ErrorInput>{'to short, min 3 characters'}</ErrorInput>}
-      {name.isDirty && name.maxLengthError && <ErrorInput>{'to long'}</ErrorInput>}
+      <Wrapper>
+        {(name.isDirty && name.minLengthError && (
+          <ErrorInput>{'to short, min 3 characters'}</ErrorInput>
+        )) ||
+          (name.isDirty && name.maxLengthError && (
+            <ErrorInput>{'to long'}</ErrorInput>
+          ))}
+      </Wrapper>
+
       <InputForm
         onChange={e => email.onChange(e)}
         onBlur={e => email.onBlur(e)}
@@ -51,15 +55,27 @@ export const RegisterForm = () => {
         name="email"
       />
       {/* {email.isDirty && email.isEmpty && <ErrorInput>{'enter email'}</ErrorInput>} */}
-      {email.isDirty && email.emailError && <ErrorInput>{'please, enter valid email'}</ErrorInput>}
+      <Wrapper>
+        {email.isDirty && email.emailError && (
+          <ErrorInput>{'please, enter valid email'}</ErrorInput>
+        )}
+      </Wrapper>
+
       <PasswordInput
         onChange={e => password.onChange(e)}
         onBlur={e => password.onBlur(e)}
         value={password.value}
       />
       {/* {password.isDirty && password.isEmpty && <ErrorInput>{'enter password'}</ErrorInput>} */}
-      {password.isDirty && password.minLengthError && <ErrorInput>{'to short, min 3 characters'}</ErrorInput>}
-      {password.isDirty && password.maxLengthError && <ErrorInput>{'to long'}</ErrorInput>}
+      <Wrapper>
+        {(password.isDirty && password.minLengthError && (
+          <ErrorInput>{'to short, min 3 characters'}</ErrorInput>
+        )) ||
+          (password.isDirty && password.maxLengthError && (
+            <ErrorInput>{'to long'}</ErrorInput>
+          ))}
+      </Wrapper>
+
       <Button
         disabled={!name.inputValid || !email.inputValid || !password.inputValid}
         type="submit"
